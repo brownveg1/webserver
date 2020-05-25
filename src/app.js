@@ -56,11 +56,10 @@ app.get('/weather', (req, res) => {
             }
 
             res.send({
-                forecast: forecastData,
-                location,
-                longitude,
-                latitude,
-                address: req.query.address
+                fulfillmentText: Response
+                ,fulfillmentMessages:[{"text":{"text":[forecastData]}}],
+                order:orderdata
+             
             })
         })
     })
